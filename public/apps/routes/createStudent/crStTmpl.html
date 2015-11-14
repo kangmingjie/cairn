@@ -1,0 +1,18 @@
+<top-bar></top-bar>
+<div class="createStudentDiv">
+<div>
+	Please enter the student's information here.
+	<div><input ng-model="newStudent.name" type="text" placeholder="student name"></input></div>
+	<div><input ng-model="newStudent.age" type="number" placeholder="student age"></input></div>
+	<div><select ng-model="newStudent.gender" required>
+		<option value="">Please Select</option>
+		<option value="Male">Male</option>
+		<option value="Female">Female</option>
+	</select></div>
+	<button ng-click="addStudent(newStudent)" class="submitStudentBtn">submit</button>
+</div>
+
+<div ng-if="studentAdded">
+	Student Added
+</div>
+</div>

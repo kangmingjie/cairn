@@ -1,0 +1,45 @@
+<div class="createStudentDiv">
+<div>
+	<h3>{{student.name}}</h3>
+	<h4>{{student.age}}</h4>
+	<h4>{{student.gender}}</h4>
+	
+	<button ng-click="behaviorHide = !behaviorHide" class="createStudentBtn" type="submit" value="new goal">new goal</button>
+	<form ng-if="behaviorHide" ng-submit="addBehavior(newBehavior)">
+		<input class="incident-display" ng-model="newBehavior.description" type="text" placeholder="enter behavior">
+	 	<textarea class="incident-display" ng-model="newBehavior.goal" placeholder="enter behavior goal here" cols="30" rows="10"></textarea>
+		<button type="submit">save</button>
+		
+	</form>
+	
+	<br>
+	
+	<button ng-click="incidentHide = !incidentHide" class="createStudentBtn" type="submit" value="new incident">new incident</button>
+	<form  ng-if="incidentHide">
+		<input class="incident-display" ng-model="newIncident.date" type="date" placeholder="enter date">
+		<input class="incident-display"  ng-model="newIncident.time" type="time" placeholder="enter time">
+		<textarea class="incident-display" ng-model="newIncident.description" cols="30" rows="10" placeholder="describe what took place during the incident"></textarea>
+		<br>
+		<input id="severity-display" ng-model="newIncident.severity" type="range" defaultvalue="5" max="10" min="1">{{newIncident.severity}}
+		<br>
+		<button type="submit" ng-click='addIncident(newIncident)'>save</button>
+	</form>
+	
+	<div ng-repeat="incident in incidents">
+		<div>{{incident.date | date: 'short'}}</div>
+		<div>{{incident.time}}</div>
+		<div>{{incident.description}}</div>
+		<div>severity: {{incident.severity}}</div>
+		<button class="createStudentBtn">edit</button>
+		<button class="createStudentBtn">print</button>
+	</div>
+	
+	</div>
+		<div ng-repeat="behavior in behaviors">
+			<div>{{behavior.description}}</div>
+			<div>{{behavior.goal}}</div>
+		<button ng-if="behaviors.length" class="createStudentBtn">edit</button>
+		<button ng-if="behaviors.length" class="createStudentBtn">print</button>
+	</div>
+</div>
+	

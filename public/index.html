@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="cairn">
+<head>
+	<title>Cairn</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>	
+	<ng-view></ng-view>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+	<script src="apps/app.js"></script>
+	<script src="apps/routes/home/homeCtrl.js"></script>
+	<script src="apps/routes/home/homeService.js"></script>
+	<script src="apps/directives/homeDirective/topBarDir.js"></script>
+	<script src="apps/routes/students/studentsCtrl.js"></script>
+	<script src="apps/routes/login/loginCtrl.js"></script>
+	<script src="apps/routes/signUp/signUpCtrl.js"></script>
+	<script src="apps/routes/students/studentsService.js"></script>
+	<script src="apps/routes/login/loginService.js"></script>
+	<script src="apps/routes/signUp/signUpService.js"></script>
+	<script src="apps/routes/createStudent/crStService.js"></script>
+	<script src="apps/routes/createStudent/crStCtrl.js"></script>
+	<script src="apps/routes/studentView/studentViewServices.js"></script>
+	<script src="apps/routes/studentView/studentViewCtrl.js"></script>
+</body>
+<footer></footer>
+</html>

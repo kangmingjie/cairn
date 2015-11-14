@@ -1,0 +1,8 @@
+<top-bar></top-bar>
+<div class="createStudentDiv">
+	<div><h3>Students</h3></div>
+<a ng-href="#/createStudent"><input class="createStudentBtn" type="submit" value="new student"/></a>
+<div ng-repeat="student in students">
+	<a ng-href="#/studentView/{{student._id}}"><div>{{student.name}}</div></a>
+</div>
+</div>
